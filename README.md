@@ -18,7 +18,7 @@ the following command:
 
 ## Dependencies
 
-We use (maven)[http://maven.apache.org/] to build and clean the code,
+We use [maven](http://maven.apache.org/) to build and clean the code,
 so you need to install it.
 
 This repository also assumes that you use Java8. So, you need
