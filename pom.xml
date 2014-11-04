@@ -1,26 +1,17 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>it.polito.tellmefirst</groupId>
-    <artifactId>tellmefirst</artifactId>
-    <version>1.0.5</version>
-  </parent>
   <groupId>it.polito.tellmefirst</groupId>
-  <artifactId>tmfpak</artifactId>
-  <version>1.0.5</version>
-  <packaging>war</packaging>
-  <name>tmfpak Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-	<groupId>it.polito.tellmefirst</groupId>
-		<artifactId>rest</artifactId>
-		<version>1.0.5</version>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>tmfpak</finalName>
-  </build>
+  <artifactId>tmfcore_build</artifactId>
+  <version>2.0.0.0</version>
+  <name>tmfcore build</name>
+  <packaging>pom</packaging>
+
+  <modules>
+   <module>tmfcore</module>
+   <module>tmfcore_war</module>
+  </modules>
+
 </project>
