@@ -19,15 +19,12 @@ the following command:
 ## Dependencies
 
 We use [maven](http://maven.apache.org/) to build and clean the code,
-so you need to install it.
+so you need to install it. This repository also assumes that you use
+Java8. So, you need to install Java8 as well. We also develop using
+NetBeans, therefore, you may want to install it as well (but other
+editors/IDEs are fine as well).
 
-This repository also assumes that you use Java8. So, you need
-to install Java8 as well.
-
-We also develop using NetBeans, therefore, you may want to install
-it as well (but other editors/IDEs are fine as well).
-
-On Xubuntu 14.04, you can install all the following by running
+On Xubuntu 14.04, you can install all the above packages by running
 the following command:
 
     sudo apt-get install maven openjdk-8-jdk netbeans
