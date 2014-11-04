@@ -1,0 +1,3 @@
+[submodule "tmfcore"]
+	path = tmfcore
+	url = https://github.com/thermz/tmfcore
