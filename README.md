@@ -44,3 +44,20 @@ To combine both (recommended to be sure that the compile process
 starts from scratch) do:
 
     mvn clean install
+
+## How this repository is organized
+
+The top-level
+[pom.xml](https://github.com/bassosimone/tmfcore_build/blob/master/pom.xml)
+file references two modules: `tmfcore` and `tmfcore_war`.
+
+The `tmfcore` module (which is also a git submodule) contains the core
+functionality of TMF, that is, the `classify()` API. More information on
+this module can be found in the [related git
+repository](https://github.com/bassosimone/tmfcore).
+
+The `tmfcore_war` module (which is not a git submodule for simplicity but
+may become one in the future) contains the code needed to prepare a
+Java [Web application ARchive
+(WAR)](https://en.wikipedia.org/wiki/WAR_%28file_format%29) that can be
+run inside a container.
