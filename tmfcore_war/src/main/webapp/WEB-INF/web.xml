@@ -10,24 +10,19 @@
 	<listener-class>it.polito.tellmefirst.web.rest.TMFListener</listener-class>
   </listener>
 
-  <context-param>
-	<param-name>conf_file_path</param-name>
-	<param-value>./conf/server.properties</param-value>
-  </context-param>
-  -->
+    <context-param>
+          <param-name>conf_file_path</param-name>
+          <param-value>./conf/server.properties</param-value>
+    </context-param>
+    -->
 
-  <servlet>
-    <servlet-name>Jersey REST Service</servlet-name>
-    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-    <init-param>
-      <param-name>com.sun.jersey.config.property.packages</param-name>
-      <param-value>it.polito.tellmefirst.http</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Jersey REST Service</servlet-name>
-    <url-pattern>/core/*</url-pattern>
-  </servlet-mapping>
+    <servlet>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 
 </web-app>
