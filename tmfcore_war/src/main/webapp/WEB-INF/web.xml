@@ -16,15 +16,6 @@
     </context-param>
     -->
 
-    <!--  <servlet>
-      <servlet-name>Jersey REST Service</servlet-name>
-      <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
-      <init-param>
-        <param-name>jersey.config.server.provider.packages</param-name>
-        <param-value>it.polito.tellmefirst.http</param-value>
-      </init-param>
-      <load-on-startup>1</load-on-startup>
-    </servlet>-->
     <servlet>
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
     </servlet>
@@ -33,9 +24,5 @@
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
-<!--    <servlet-mapping>
-        <servlet-name>Jersey REST Service</servlet-name>
-        <url-pattern>/core/*</url-pattern>
-    </servlet-mapping>-->
 
 </web-app>
