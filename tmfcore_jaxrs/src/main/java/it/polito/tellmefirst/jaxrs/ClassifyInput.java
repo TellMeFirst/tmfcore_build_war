@@ -19,7 +19,7 @@ package it.polito.tellmefirst.jaxrs;
 
 public class ClassifyInput {
 	private String text, lang;
-	Integer numTopics;
+	private Integer numTopics;
 
 	public String getText() {
 		return text;
