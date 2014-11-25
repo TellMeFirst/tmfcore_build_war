@@ -1,8 +1,9 @@
-# TMFCoreBuild
+# TMFCoreBuildWar
 
 This repository contains the subrepositories needed to build the
 [core module](https://github.com/bassosimone/tmfcore) of
-[TellMeFirst (TMF)](http://tellmefirst.polito.it/).
+[TellMeFirst (TMF)](http://tellmefirst.polito.it/) and specifically
+to obtain a WAR suitable to run on, e.g., Tomcat 7.
 
 ## How to clone this repository
 
@@ -58,4 +59,4 @@ The `tmfcore_war` module (which is not a git submodule for simplicity but
 may become one in the future) contains the code needed to prepare a
 Java [Web application ARchive
 (WAR)](https://en.wikipedia.org/wiki/WAR_%28file_format%29) that can be
-run inside a container.
+run inside a container, e.g., Tomcat 7.
