@@ -27,11 +27,6 @@ the following command:
 
     sudo apt-get install maven openjdk-8-jdk
 
-We also develop using [NetBeans](https://netbeans.org/), therefore, you
-may also want to install it (but other editors/IDEs are fine as well).
-Since we use Java8, if you want to use NetBeans, you need to download and
-install NetBeans8 from the [NetBeans web site](https://netbeans.org/).
-
 ## How to build and clean the code
 
 Once you have installed all the dependencies, you can build the
