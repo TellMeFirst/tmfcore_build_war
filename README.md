@@ -89,7 +89,10 @@ create the required files and directories:
     $ git clone https://github.com/TellMeFirst/test-indexes data
 
 Finally, you need to edit `conf/server.properties` to make sure
-that it contains the following content:
+that it contains the following content (we use the same index
+for both italian and english; this is OK because it is just for
+testing, also note that the index we use here is very small
+compared to the one we use in production):
 
     corpus.index.it = /var/local/tmfcore/data/index
     kb.it = /var/local/tmfcore/data/index
