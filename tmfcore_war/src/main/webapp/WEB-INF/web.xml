@@ -5,17 +5,6 @@
 <web-app>
   <display-name>tmfcore_war</display-name>
 
-  <!-- maybe not needed, maybe yes
-  <listener>
-	<listener-class>it.polito.tellmefirst.web.rest.TMFListener</listener-class>
-  </listener>
-
-    <context-param>
-          <param-name>conf_file_path</param-name>
-          <param-value>./conf/server.properties</param-value>
-    </context-param>
-    -->
-
     <servlet>
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
     </servlet>
