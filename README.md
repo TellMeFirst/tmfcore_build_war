@@ -48,12 +48,16 @@ starts from scratch) do:
 
 The top-level
 [pom.xml](https://github.com/bassosimone/tmfcore_build/blob/master/pom.xml)
-file references two modules: `tmfcore` and `tmfcore_war`.
+file references three modules: `tmfcore`, `tmfcore_jaxrs` and `tmfcore_war`.
 
 The `tmfcore` module (which is also a git submodule) contains the core
 functionality of TMF, that is, the `classify()` API. More information on
 this module can be found in the [related git
 repository](https://github.com/bassosimone/tmfcore).
+
+The `tmfcore_jaxrs` module (which is not a git submodule for simplicity but
+may become one in the future) contains a Jax-rs annotated Java class that
+can be used to generate a RESTful web service exposing TMF's core.
 
 The `tmfcore_war` module (which is not a git submodule for simplicity but
 may become one in the future) contains the code needed to prepare a
