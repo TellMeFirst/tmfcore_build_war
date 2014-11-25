@@ -33,7 +33,7 @@ the following command:
 Once you have installed all the dependencies, you can build the
 code using the following command:
 
-    mvn install
+    mvn package
 
 You can instead clean the compiled artifacts using:
 
@@ -42,7 +42,7 @@ You can instead clean the compiled artifacts using:
 To combine both (recommended to be sure that the compile process
 starts from scratch) do:
 
-    mvn clean install
+    mvn clean package
 
 ## How this repository is organized
 
