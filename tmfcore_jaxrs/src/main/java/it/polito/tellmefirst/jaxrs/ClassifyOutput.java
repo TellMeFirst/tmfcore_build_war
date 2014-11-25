@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package it.polito.tellmefirst.jaxrs;
 
 public class ClassifyOutput {
@@ -74,13 +73,5 @@ public class ClassifyOutput {
 
 	public void setWikilink(String s) {
 		wikilink = s;
-	}
-
-	@Override
-	public String toString() {
-		return "ClassifyOutput{" + "uri=" + uri + ", label=" + label
-			+ ", title=" + title + ", score=" + score + ", mergedTypes="
-			+ mergedTypes + ", image=" + image + ", wikilink="
-			+ wikilink + '}' +'\n';
 	}
 }
