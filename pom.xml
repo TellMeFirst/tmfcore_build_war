@@ -4,13 +4,14 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.polito.tellmefirst</groupId>
-  <artifactId>tmfcore_build</artifactId>
+  <artifactId>tmfcore_build_war</artifactId>
   <version>2.0.0.0</version>
-  <name>tmfcore build</name>
+  <name>tmfcore build war</name>
   <packaging>pom</packaging>
 
   <modules>
    <module>tmfcore</module>
+   <module>tmfcore_jaxrs</module>
    <module>tmfcore_war</module>
   </modules>
 

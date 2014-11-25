@@ -17,9 +17,14 @@
             <version>2.0.0.0</version>
         </dependency>
         <dependency>
+            <groupId>it.polito.tellmefirst</groupId>
+            <artifactId>tmfcore_jaxrs</artifactId>
+            <version>2.0.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
-            <version>2.7</version>
+            <version>2.13</version>
         </dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
@@ -29,7 +34,7 @@
     </dependencies>
 
     <build>
-        <finalName>tmfcore_war</finalName>
+        <finalName>tmfcore</finalName>
     </build>
 
 </project>
