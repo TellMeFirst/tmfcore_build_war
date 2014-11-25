@@ -10,7 +10,7 @@ to obtain a WAR suitable to run on, e.g., Tomcat 7.
 Since this repository contains submodules, to clone this you have to
 run the following command:
 
-    git clone --recursive https://github.com/bassosimone/tmfcore_build
+    git clone --recursive https://github.com/bassosimone/tmfcore_build_war
 
 Otherwise, if you have already cloned, you can fetch the submodules using
 the following command:
