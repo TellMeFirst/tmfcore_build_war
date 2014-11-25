@@ -25,7 +25,7 @@ public class ClassifyOutput {
 	}
 
 	public void setUri(String s) {
-		uri = uri;
+		uri = s;
 	}
 
 	public String getLabel() {
