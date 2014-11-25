@@ -1,40 +1,40 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>it.polito.tellmefirst</groupId>
-    <artifactId>tmfcore_war</artifactId>
-    <version>2.0.0.0</version>
-    <packaging>war</packaging>
-    <name>tmfcore WAR</name>
-    <url>http://maven.apache.org</url>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.polito.tellmefirst</groupId>
+	<artifactId>tmfcore_war</artifactId>
+	<version>2.0.0.0</version>
+	<packaging>war</packaging>
+	<name>tmfcore WAR</name>
+	<url>http://maven.apache.org</url>
 
-    <dependencies>
-        <dependency>
-            <groupId>it.polito.tellmefirst</groupId>
-            <artifactId>tmfcore</artifactId>
-            <version>2.0.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>it.polito.tellmefirst</groupId>
-            <artifactId>tmfcore_jaxrs</artifactId>
-            <version>2.0.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>2.13</version>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>it.polito.tellmefirst</groupId>
+			<artifactId>tmfcore</artifactId>
+			<version>2.0.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>it.polito.tellmefirst</groupId>
+			<artifactId>tmfcore_jaxrs</artifactId>
+			<version>2.0.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.13</version>
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
 			<version>2.13</version>
 		</dependency>
-    </dependencies>
+	</dependencies>
 
-    <build>
-        <finalName>tmfcore</finalName>
-    </build>
+	<build>
+		<finalName>tmfcore</finalName>
+	</build>
 
 </project>
