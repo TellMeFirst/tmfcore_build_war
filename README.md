@@ -23,7 +23,7 @@ We use [maven](http://maven.apache.org/) to build and clean the code,
 so you need to install it. This repository also assumes that you use
 [Java8](https://jdk8.java.net/). So, you need to install Java8 as well.
 
-On Xubuntu 14.04, you can install all the above packages by running
+On Xubuntu 14.10, you can install all the above packages by running
 the following command:
 
     sudo apt-get install maven openjdk-8-jdk
