@@ -17,8 +17,6 @@
 package it.polito.tellmefirst.jaxrs;
 
 import it.polito.tellmefirst.classify.Classifier;
-import it.polito.tellmefirst.util.TMFVariables;
-import it.polito.tellmefirst.lucene.IndexesUtil;
 import java.io.IOException;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
@@ -31,14 +29,6 @@ import org.apache.lucene.queryParser.ParseException;
 
 @Path("classify")
 public class ClassifyResource {
-
-	private TMFVariables variables;
-
-	public ClassifyResource() throws IOException {
-		variables = new TMFVariables(
-			"/var/local/tmfcore/conf/server.properties");
-		IndexesUtil.init();
-	}
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
