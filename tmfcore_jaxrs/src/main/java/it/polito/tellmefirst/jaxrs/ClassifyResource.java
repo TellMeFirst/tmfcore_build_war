@@ -17,7 +17,6 @@
 package it.polito.tellmefirst.jaxrs;
 
 import it.polito.tellmefirst.classify.Classifier;
-import java.io.IOException;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
 import javax.ws.rs.POST;

@@ -26,7 +26,7 @@ public class WebApplication extends Application {
 
 	@Override
 	public Set<Class<?>> getClasses() {
-		final Set<Class<?>> classes = new HashSet<Class<?>>();
+		final Set<Class<?>> classes = new HashSet<>();
 		classes.add(ClassifyResource.class);
 		return classes;
 	}
