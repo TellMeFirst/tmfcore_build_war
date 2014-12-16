@@ -13,11 +13,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>it.polito.tellmefirst</groupId>
-			<artifactId>tmfcore</artifactId>
-			<version>2.0.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>it.polito.tellmefirst</groupId>
 			<artifactId>tmfcore_jaxrs</artifactId>
 			<version>2.0.0.0</version>
 		</dependency>
