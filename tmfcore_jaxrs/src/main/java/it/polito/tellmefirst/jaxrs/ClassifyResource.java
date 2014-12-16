@@ -41,17 +41,31 @@ public class ClassifyResource {
 	}
 
 	@POST
-	@Path("json")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public List<ClassifyOutput> classifyJson(ClassifyInput input)
-			throws InterruptedException, IOException, ParseException {
-		return jsonAdapter(new Classifier(input.getLang())
-				.classify(input.getText(), input.getNumTopics(),
-						input.getLang()));
+	public List<ClassifyOutput> classify(ClassifyInput input)
+		throws InterruptedException, IOException, ParseException {
+		return classifyAdapter(
+			new Classifier(input.getLang())
+					.classify(	input.getText(),
+								input.getNumTopics(),
+								input.getLang()));
 	}
 
-	private List<ClassifyOutput> jsonAdapter(List<String[]> list) {
+	@POST
+	@Path("short")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public List<ClassifyOutput> classifyShortText(ClassifyInput input)
+		throws InterruptedException, IOException, ParseException {
+		return classifyAdapter(
+			new Classifier(input.getLang())
+					.classifyShortText(	input.getText(), 
+										input.getNumTopics(),
+										input.getLang()));
+	}
+
+	private List<ClassifyOutput> classifyAdapter(List<String[]> list) {
 		return list.stream().map(strings -> {
 			ClassifyOutput output = new ClassifyOutput();
 			output.setUri(strings[0]);
