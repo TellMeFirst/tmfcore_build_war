@@ -5,6 +5,11 @@
 <web-app>
   <display-name>tmfcore_war</display-name>
 
+    <!-- Jetty 9.2.5 does not support @WebListener: -->
+    <listener>
+        <listener-class>it.polito.tellmefirst.jaxrs.ClassifyListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
     </servlet>
