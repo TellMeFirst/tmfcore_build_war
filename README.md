@@ -75,18 +75,18 @@ To populate `/var/local/tmfcore` you need to run the sequence of
 commands described next. To avoid running too many commands as root, we
 start by creating `/var/local/tmfcore` and assigning it to ourself:
 
-    $ cd /var/local
-    $ sudo install -d tmfcore
-    $ sudo chown $USER tmfcore
+    cd /var/local
+    sudo install -d tmfcore
+    sudo chown $USER tmfcore
 
 Next we enter into `tmfcore`, we set a reasonable umask, and we
 create the required files and directories:
 
-    $ cd tmfcore
-    $ umask 022
-    $ install -d conf
-    $ install -m 644 /dev/null conf/server.properties
-    $ git clone https://github.com/TellMeFirst/test-indexes data
+    cd tmfcore
+    umask 022
+    install -d conf
+    install -m 644 /dev/null conf/server.properties
+    git clone https://github.com/TellMeFirst/test-indexes data
 
 Finally, you need to edit `conf/server.properties` to make sure
 that it contains the following content (we use the same index
@@ -108,21 +108,21 @@ compared to the one we use in production):
 
 We download `jetty-runner` and we also verify the public key:
 
-    $ cd /path/to/tmfcore_build_war
-    $ wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.2.5.v20141112/jetty-runner-9.2.5.v20141112.jar
-    $ wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.2.5.v20141112/jetty-runner-9.2.5.v20141112.jar.asc
-    $ gpg --recv-keys D7C58886
-    $ gpg --verify jetty-runner-9.2.5.v20141112.jar.asc
+    cd /path/to/tmfcore_build_war
+    wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.2.5.v20141112/jetty-runner-9.2.5.v20141112.jar
+    wget http://central.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.2.5.v20141112/jetty-runner-9.2.5.v20141112.jar.asc
+    gpg --recv-keys D7C58886
+    gpg --verify jetty-runner-9.2.5.v20141112.jar.asc
 
 Next, use `jetty-runner` to run `tmfcore.war` (be patient because it
 may take several seconds for `jetty-runner` to be up and running):
 
-    $ java -jar jetty-runner-9.2.5.v20141112.jar \
+    java -jar jetty-runner-9.2.5.v20141112.jar \
         tmfcore_war/target/tmfcore.war
 
 Finally, you can run a simple test and check whether it returns a JSON:
 
-    $ ./test/input-jetty.sh
+    ./test/jetty.py
 
 ### Run the WAR using Tomcat
 
@@ -133,4 +133,4 @@ Go in the `/manager/html` interface of Tomcat and deploy the WAR file.
 
 To test that everything is fine, use the Tomcat-related simple test:
 
-    $ ./test/input-tomcat.sh
+    ./test/tomcat.py
