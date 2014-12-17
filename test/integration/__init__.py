@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 #
 # Copyright (C) 2014 Simone Basso <bassosimone@gmail.com>.
 #
@@ -21,13 +19,14 @@
 
 import httplib
 import json
-import os.path
+import os
 import unittest
 
 SETTINGS = {
     'prefix': '/tmfcore',  # Assuming Tomcat
     'port': 8080,
-    'topdir': os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    'topdir': os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)))),
 }
 
 def _dbpedia(concept):
@@ -64,9 +63,15 @@ class TestNormalBehavior(unittest.TestCase):
         respdict = json.loads(resp.read())
 
         self.assertEqual(len(respdict), 4)
+
+        #
+        # Note: I've seen the order of these changing after the
+        # package was regenerated; more permutations may therefore
+        # also happen in the future (is README.md too short?)
+        #
         self.assertEqual(respdict[0]["uri"], _dbpedia("ASCII"))
-        self.assertEqual(respdict[1]["uri"], _dbpedia("Agricultural_science"))
-        self.assertEqual(respdict[2]["uri"], _dbpedia("Apollo_11"))
+        self.assertEqual(respdict[1]["uri"], _dbpedia("Apollo_11"))
+        self.assertEqual(respdict[2]["uri"], _dbpedia("Agricultural_science"))
         self.assertEqual(respdict[3]["uri"], _dbpedia("Android_(robot)"))
 
     def test_classify(self):
@@ -400,10 +405,3 @@ class TestClassifyShortWithLongInput(unittest.TestCase):
         resp = conn.getresponse()
 
         self.assertFalse(resp.status == 200)
-
-def main():
-    """ Main function """
-    unittest.main()
-
-if __name__ == "__main__":
-    main()
