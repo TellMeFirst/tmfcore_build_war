@@ -122,7 +122,7 @@ may take several seconds for `jetty-runner` to be up and running):
 
 Finally, you can run a simple test and check whether it returns a JSON:
 
-    $ ./test/input-jetty.sh
+    $ ./test/jetty.py
 
 ### Run the WAR using Tomcat
 
@@ -133,4 +133,4 @@ Go in the `/manager/html` interface of Tomcat and deploy the WAR file.
 
 To test that everything is fine, use the Tomcat-related simple test:
 
-    $ ./test/input-tomcat.sh
+    $ ./test/tomcat.py
